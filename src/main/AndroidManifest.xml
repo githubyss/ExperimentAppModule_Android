@@ -1,3 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.githubyss.mobile"
-        />
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.githubyss.mobile.experiment.app"
+          tools:ignore="GradleOverrides"
+        >
+
+    <application
+            android:allowBackup="false"
+            android:supportsRtl="true"
+            >
+
+        <activity
+                android:name=".animation.ExpAnimationActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/comkitAppTheme"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+                />
+    </application>
+</manifest>
