@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/comresBothMatchParentStyle"
+        android:background="@color/comresLayoutBgColorLightGray"
+        android:orientation="vertical"
+        >
+
+    <ScrollView
+            style="@style/comresBothMatchParentStyle"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            >
+
+        <LinearLayout
+                android:id="@+id/llSvContent"
+                style="@style/comresBothMatchParentStyle"
+                android:layout_marginLeft="@dimen/comresSideMarginDefault"
+                android:layout_marginRight="@dimen/comresSideMarginDefault"
+                android:orientation="vertical"
+                >
+
+            <Button
+                    android:id="@+id/btnMove"
+                    style="@style/comresCommonBtnDefaultStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/expAnimationMove"
+                    />
+
+            <Button
+                    android:id="@+id/btnScale"
+                    style="@style/comresCommonBtnDefaultStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/expAnimationScale"
+                    />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Test Sdk Android</string>
+    <string name="expAppName">Experiment App Android</string>
+
+    <string name="expHomepageTitle">Experiment App</string>
+
+    <string name="expAnimationTitle">Animation</string>
+
+    <string name="expAnimationMove">Move</string>
+    <string name="expAnimationScale">Scale</string>
+
 </resources>

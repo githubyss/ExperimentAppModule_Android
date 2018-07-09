@@ -11,8 +11,9 @@
 
         <activity
                 android:name=".animation.ExpAnimationActivity"
+                android:launchMode="singleTop"
                 android:screenOrientation="portrait"
-                android:theme="@style/comkitAppTheme"
+                android:theme="@style/comresAppTheme"
                 android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
                 />
     </application>
