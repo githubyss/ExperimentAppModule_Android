@@ -22,20 +22,30 @@
                 >
 
             <Button
-                    android:id="@+id/btnProperty"
+                    android:id="@+id/btnPropertyAnimation"
                     style="@style/comresCommonBtnDefaultStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:text="@string/expAnimationProperty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Property Animation"
                     />
 
             <Button
-                    android:id="@+id/btnTween"
+                    android:id="@+id/btnTweenAnimation"
                     style="@style/comresCommonBtnDefaultStyle"
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/expAnimationTween"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Tween Animation"
+                    />
+
+            <Button
+                    android:id="@+id/btnContactsFetcher"
+                    style="@style/comresCommonBtnDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Contacts Fetcher"
                     />
         </LinearLayout>
     </ScrollView>

@@ -1,51 +1,55 @@
-package com.githubyss.mobile.experiment.app.animation
+package com.githubyss.mobile.experiment.app.homepage
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.alibaba.android.arouter.facade.annotation.Route
 import com.githubyss.mobile.experiment.app.R
 import com.githubyss.mobile.experiment.app.animation.property.ExpPropertyAnimationFragment
 import com.githubyss.mobile.experiment.app.base.ExpBaseFragment
-import kotlinx.android.synthetic.main.exp_fragment_animation.*
+import com.githubyss.mobile.experiment.app.kittest.ExpContactsFetcherFragment
+import kotlinx.android.synthetic.main.exp_fragment_homepage.*
 
 /**
- * ExpPropertyAnimFragmentent.kt
+ * ExpHomepageFragment
  * <Description>
  * <Details>
  *
  * @author Ace Yan
  * @github githubyss
  */
-@Route(path = "/experiment/app/animation/ExpPropertyAnimationFragment")
-class ExpAnimationFragment : ExpBaseFragment() {
+class ExpHomepageFragment : ExpBaseFragment() {
     companion object {
-        val TAG = ExpAnimationFragment::class.java.simpleName
+        val TAG = ExpHomepageFragment::class.java.simpleName
     }
+
 
     private var rootView: View? = null
 
     private val onClickListener = View.OnClickListener { v ->
         when (v.id) {
-            R.id.btnProperty -> {
+            R.id.btnPropertyAnimation -> {
                 replaceFragment(ExpPropertyAnimationFragment(), ExpPropertyAnimationFragment.TAG, true)
             }
 
-            R.id.btnTween -> {
+            R.id.btnTweenAnimation -> {
+            }
+
+            R.id.btnContactsFetcher -> {
+                replaceFragment(ExpContactsFetcherFragment(), ExpContactsFetcherFragment.TAG, true)
             }
         }
     }
 
 
     override fun initView() {
-        btnProperty.setOnClickListener(onClickListener)
-        btnTween.setOnClickListener(onClickListener)
+        btnPropertyAnimation.setOnClickListener(onClickListener)
+        btnTweenAnimation.setOnClickListener(onClickListener)
+        btnContactsFetcher.setOnClickListener(onClickListener)
     }
 
-
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        rootView = inflater?.inflate(R.layout.exp_fragment_animation, container, false)
+        rootView = inflater?.inflate(R.layout.exp_fragment_homepage, container, false)
         return rootView
     }
 

@@ -5,11 +5,4 @@
     <string name="expHomepageTitle">Experiment App</string>
 
     <string name="expAnimationTitle">Animation</string>
-
-    <string name="expAnimationProperty">Property</string>
-    <string name="expAnimationTween">Tween</string>
-
-    <string name="expAnimationPropertyMove">Move</string>
-    <string name="expAnimationPropertyScale">Scale</string>
-
 </resources>

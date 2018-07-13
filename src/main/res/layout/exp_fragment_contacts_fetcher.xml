@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/comresBothMatchParentStyle"
+        android:background="@color/comresLayoutBgColorLightGray"
+        android:orientation="vertical"
+        >
+
+    <ScrollView
+            style="@style/comresBothMatchParentStyle"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            >
+
+        <LinearLayout
+                android:id="@+id/llSvContent"
+                style="@style/comresBothMatchParentStyle"
+                android:layout_marginLeft="@dimen/comresSideMarginDefault"
+                android:layout_marginRight="@dimen/comresSideMarginDefault"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+            <Button
+                    android:id="@+id/btnStartContactsFetch"
+                    style="@style/comresCommonBtnDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Start Contacts Fetch"
+                    />
+
+            <Button
+                    android:id="@+id/btnStopContactsFetch"
+                    style="@style/comresCommonBtnDefaultStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Stop Contacts Fetch"
+                    />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

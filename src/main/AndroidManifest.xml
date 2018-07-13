@@ -10,8 +10,8 @@
             >
 
         <activity
-                android:name=".animation.ExpAnimationActivity"
-                android:launchMode="singleTop"
+                android:name=".homepage.ExpHomepageActivity"
+                android:launchMode="singleTask"
                 android:screenOrientation="portrait"
                 android:theme="@style/comresAppTheme"
                 android:windowSoftInputMode="stateAlwaysHidden|adjustResize"

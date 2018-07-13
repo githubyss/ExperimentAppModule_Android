@@ -29,7 +29,7 @@
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:text="@string/expAnimationPropertyMove"
+                    android:text="Move"
                     />
 
             <Button
@@ -38,7 +38,7 @@
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/expAnimationPropertyScale"
+                    android:text="Scale"
                     />
         </LinearLayout>
 
