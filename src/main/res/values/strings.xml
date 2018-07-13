@@ -6,7 +6,10 @@
 
     <string name="expAnimationTitle">Animation</string>
 
-    <string name="expAnimationMove">Move</string>
-    <string name="expAnimationScale">Scale</string>
+    <string name="expAnimationProperty">Property</string>
+    <string name="expAnimationTween">Tween</string>
+
+    <string name="expAnimationPropertyMove">Move</string>
+    <string name="expAnimationPropertyScale">Scale</string>
 
 </resources>

@@ -17,25 +17,25 @@
                 style="@style/comresBothMatchParentStyle"
                 android:layout_marginLeft="@dimen/comresSideMarginDefault"
                 android:layout_marginRight="@dimen/comresSideMarginDefault"
+                android:gravity="center"
                 android:orientation="vertical"
                 >
 
             <Button
-                    android:id="@+id/btnMove"
+                    android:id="@+id/btnProperty"
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/expAnimationMove"
+                    android:text="@string/expAnimationProperty"
                     />
 
             <Button
-                    android:id="@+id/btnScale"
+                    android:id="@+id/btnTween"
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="20dp"
-                    android:text="@string/expAnimationScale"
+                    android:text="@string/expAnimationTween"
                     />
         </LinearLayout>
     </ScrollView>
