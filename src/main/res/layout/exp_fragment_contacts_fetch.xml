@@ -19,6 +19,8 @@
                 android:layout_marginRight="@dimen/comresSideMarginDefault"
                 android:gravity="center"
                 android:orientation="vertical"
+                android:paddingBottom="@dimen/comresSideMarginDefault"
+                android:paddingTop="@dimen/comresSideMarginDefault"
                 >
 
             <Button

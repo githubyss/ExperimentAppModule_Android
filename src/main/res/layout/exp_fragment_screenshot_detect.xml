@@ -24,39 +24,28 @@
                 >
 
             <Button
-                    android:id="@+id/btnPropertyAnimation"
+                    android:id="@+id/btnStartScreenshotDetect"
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Property Animation"
+                    android:text="Start Screenshot Detect"
                     />
 
             <Button
-                    android:id="@+id/btnTweenAnimation"
+                    android:id="@+id/btnStopScreenshotDetect"
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Tween Animation"
+                    android:text="Stop Screenshot Detect"
                     />
 
-            <Button
-                    android:id="@+id/btnContactsFetch"
-                    style="@style/comresCommonBtnDefaultStyle"
+            <ImageView
+                    android:id="@+id/ivScreenshot"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="20dp"
-                    android:text="Contacts Fetch"
-                    />
-
-            <Button
-                    android:id="@+id/btnScreenshotDetect"
-                    style="@style/comresCommonBtnDefaultStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:text="Screenshot Detect"
                     />
         </LinearLayout>
     </ScrollView>

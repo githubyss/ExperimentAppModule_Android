@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.githubyss.mobile.common.kit.ComkitApplication
 import com.githubyss.mobile.common.ui.animator.evaluator.coordinate.ComuiCoordinate
 import com.githubyss.mobile.common.ui.animator.evaluator.coordinate.ComuiCoordinateEvaluator
 import com.githubyss.mobile.common.ui.floatingwindow.ComuiAutoHideFloatingWindow
@@ -46,11 +47,11 @@ class ExpPropertyAnimationFragment : ExpBaseFragment() {
             }
 
             R.id.btnShow -> {
-                ComuiAutoHideFloatingWindow.getInstance(activity)?.show()
+                ComuiAutoHideFloatingWindow.instance.show(ComkitApplication.instance.application)
             }
 
             R.id.btnHide -> {
-                ComuiAutoHideFloatingWindow.getInstance(activity)?.hide()
+                ComuiAutoHideFloatingWindow.instance.hide()
             }
         }
     }
@@ -141,6 +142,6 @@ class ExpPropertyAnimationFragment : ExpBaseFragment() {
     override fun onDestroy() {
         super.onDestroy()
         stopAnimator()
-        ComuiAutoHideFloatingWindow.instance?.hide()
+        ComuiAutoHideFloatingWindow.instance.hide()
     }
 }

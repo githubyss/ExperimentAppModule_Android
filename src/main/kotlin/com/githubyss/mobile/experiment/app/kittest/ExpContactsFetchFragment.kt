@@ -4,24 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.githubyss.mobile.common.kit.fetcher.contacts.ComkitContactsFetcher
-import com.githubyss.mobile.common.kit.fetcher.contacts.ComkitContactsModel
+import com.githubyss.mobile.common.kit.ComkitApplication
 import com.githubyss.mobile.common.kit.logcat.ComkitLogcatUtils
+import com.githubyss.mobile.common.kit.manager.contacts.ComkitContactsFetchManager
+import com.githubyss.mobile.common.kit.manager.contacts.ComkitContactsModel
 import com.githubyss.mobile.experiment.app.R
 import com.githubyss.mobile.experiment.app.base.ExpBaseFragment
-import kotlinx.android.synthetic.main.exp_fragment_contacts_fetcher.*
+import kotlinx.android.synthetic.main.exp_fragment_contacts_fetch.*
 
 /**
- * ExpContactsFetcherFragment
+ * ExpContactsFetchFragment
  * <Description>
  * <Details>
  *
  * @author Ace Yan
  * @github githubyss
  */
-class ExpContactsFetcherFragment : ExpBaseFragment() {
+class ExpContactsFetchFragment : ExpBaseFragment() {
     companion object {
-        val TAG = ExpContactsFetcherFragment::class.java.simpleName
+        val TAG = ExpContactsFetchFragment::class.java.simpleName
     }
 
 
@@ -30,17 +31,17 @@ class ExpContactsFetcherFragment : ExpBaseFragment() {
     private val onClickListener = View.OnClickListener { v ->
         when (v.id) {
             R.id.btnStartContactsFetch -> {
-                ComkitContactsFetcher.instance.startFetch(
-                        activity,
-                        object : ComkitContactsFetcher.OnContactsFetchListener {
-                            override fun onFetchComplete(list: List<ComkitContactsModel>) {
+                ComkitContactsFetchManager.instance.startFetch(
+                        ComkitApplication.instance.application,
+                        object : ComkitContactsFetchManager.OnContactsFetchListener {
+                            override fun onContactsFetched(list: List<ComkitContactsModel>) {
                                 ComkitLogcatUtils.d(msg = list.toString())
                             }
                         })
             }
 
             R.id.btnStopContactsFetch -> {
-                ComkitContactsFetcher.instance.stopFetch()
+                ComkitContactsFetchManager.instance.stopFetch()
             }
         }
     }
@@ -52,7 +53,7 @@ class ExpContactsFetcherFragment : ExpBaseFragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        rootView = inflater?.inflate(R.layout.exp_fragment_contacts_fetcher, container, false)
+        rootView = inflater?.inflate(R.layout.exp_fragment_contacts_fetch, container, false)
         return rootView
     }
 

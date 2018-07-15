@@ -4,6 +4,7 @@
           tools:ignore="GradleOverrides"
         >
 
+
     <application
             android:allowBackup="false"
             android:supportsRtl="true"

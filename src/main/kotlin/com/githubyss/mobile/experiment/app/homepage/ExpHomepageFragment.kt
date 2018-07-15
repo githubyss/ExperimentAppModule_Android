@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import com.githubyss.mobile.experiment.app.R
 import com.githubyss.mobile.experiment.app.animation.property.ExpPropertyAnimationFragment
 import com.githubyss.mobile.experiment.app.base.ExpBaseFragment
-import com.githubyss.mobile.experiment.app.kittest.ExpContactsFetcherFragment
+import com.githubyss.mobile.experiment.app.kittest.ExpContactsFetchFragment
+import com.githubyss.mobile.experiment.app.kittest.ExpScreenshotDetectFragment
 import kotlinx.android.synthetic.main.exp_fragment_homepage.*
 
 /**
@@ -35,8 +36,12 @@ class ExpHomepageFragment : ExpBaseFragment() {
             R.id.btnTweenAnimation -> {
             }
 
-            R.id.btnContactsFetcher -> {
-                replaceFragment(ExpContactsFetcherFragment(), ExpContactsFetcherFragment.TAG, true)
+            R.id.btnContactsFetch -> {
+                replaceFragment(ExpContactsFetchFragment(), ExpContactsFetchFragment.TAG, true)
+            }
+
+            R.id.btnScreenshotDetect -> {
+                replaceFragment(ExpScreenshotDetectFragment(), ExpScreenshotDetectFragment.TAG, true)
             }
         }
     }
@@ -45,7 +50,8 @@ class ExpHomepageFragment : ExpBaseFragment() {
     override fun initView() {
         btnPropertyAnimation.setOnClickListener(onClickListener)
         btnTweenAnimation.setOnClickListener(onClickListener)
-        btnContactsFetcher.setOnClickListener(onClickListener)
+        btnContactsFetch.setOnClickListener(onClickListener)
+        btnScreenshotDetect.setOnClickListener(onClickListener)
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {

@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 apply plugin: 'com.alibaba.arouter'
 
@@ -31,6 +31,12 @@ dependencies {
     /* ARouter */
     implementation "com.alibaba:arouter-api:$AROUTER_API_VERSION"
     kapt "com.alibaba:arouter-compiler:$AROUTER_COMPILE_VERSION"
+
+    /* Glide */
+    implementation("com.github.bumptech.glide:glide:$GLIDE_API_VERSION") {
+        exclude group: "com.android.support"
+    }
+    kapt "com.github.bumptech.glide:compiler:$GLIDE_COMPILE_VERSION"
 
     /* Test */
     testImplementation "junit:junit:$JUNIT_VERSION"
