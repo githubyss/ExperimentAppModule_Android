@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.githubyss.mobile.experiment.app.R
 import com.githubyss.mobile.experiment.app.base.ExpBaseActivity
+import com.githubyss.mobile.experiment.app.config.ExpPageRouterConfig
 
 /**
  * ExpHomepageActivity
@@ -13,7 +14,7 @@ import com.githubyss.mobile.experiment.app.base.ExpBaseActivity
  * @author Ace Yan
  * @github githubyss
  */
-@Route(path = "/experiment/app/homepage/ExpHomepageActivity")
+@Route(path = ExpPageRouterConfig.HOMEPAGE)
 class ExpHomepageActivity : ExpBaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,7 +1,7 @@
 package com.githubyss.mobile.experiment.app.datastructure.serialization
 
 /**
- * SerializedMapArray.kt
+ * SerializedMapArray
  * <Description> Data structure of Serialized MapArray.
  * <Details>
  *

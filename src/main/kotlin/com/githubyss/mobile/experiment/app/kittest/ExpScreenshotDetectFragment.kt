@@ -24,7 +24,6 @@ class ExpScreenshotDetectFragment : ExpBaseFragment() {
         val TAG = ExpScreenshotDetectFragment::class.java.simpleName
     }
 
-
     private var rootView: View? = null
 
     private val onClickListener = View.OnClickListener { v ->
@@ -33,7 +32,7 @@ class ExpScreenshotDetectFragment : ExpBaseFragment() {
                 ComkitScreenshotDetectManager.instance.startDetect(
                         ComkitApplication.instance.application,
                         object : ComkitScreenshotDetectManager.OnScreenshotDetectListener {
-                            override fun onScreenshotDetected(path: String) {
+                            override fun onScreenshotDetect(path: String) {
                                 ComuiAutoHideFloatingWindow.instance.show(ComkitApplication.instance.application).setImage(path)
                             }
                         })

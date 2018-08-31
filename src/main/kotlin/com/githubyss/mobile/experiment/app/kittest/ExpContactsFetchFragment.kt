@@ -25,7 +25,6 @@ class ExpContactsFetchFragment : ExpBaseFragment() {
         val TAG = ExpContactsFetchFragment::class.java.simpleName
     }
 
-
     private var rootView: View? = null
 
     private val onClickListener = View.OnClickListener { v ->
@@ -34,7 +33,7 @@ class ExpContactsFetchFragment : ExpBaseFragment() {
                 ComkitContactsFetchManager.instance.startFetch(
                         ComkitApplication.instance.application,
                         object : ComkitContactsFetchManager.OnContactsFetchListener {
-                            override fun onContactsFetched(list: List<ComkitContactsModel>) {
+                            override fun onContactsFetch(list: List<ComkitContactsModel>) {
                                 ComkitLogcatUtils.d(msg = list.toString())
                             }
                         })

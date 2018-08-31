@@ -3,7 +3,14 @@ package com.githubyss.mobile.experiment.app.datastructure.digraph
 import android.util.Log
 import com.githubyss.mobile.experiment.app.datastructure.digraph.model.Node
 
-
+/**
+ * HeaviestPathAlgorithm
+ * <Description>
+ * <Details>
+ *
+ * @author Ace Yan
+ * @github githubyss
+ */
 class HeaviestPathAlgorithm {
     private val TAG = javaClass.simpleName
 

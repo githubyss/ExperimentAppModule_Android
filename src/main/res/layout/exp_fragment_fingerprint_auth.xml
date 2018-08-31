@@ -24,48 +24,31 @@
                 >
 
             <Button
-                    android:id="@+id/btnPropertyAnimation"
+                    android:id="@+id/btnStartFingerprintAuth"
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Property Animation"
+                    android:text="Start Fingerprint Auth"
                     />
 
             <Button
-                    android:id="@+id/btnTweenAnimation"
+                    android:id="@+id/btnStopFingerprintAuth"
                     style="@style/comresCommonBtnDefaultStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
-                    android:text="Tween Animation"
+                    android:text="Stop Fingerprint Auth"
                     />
 
-            <Button
-                    android:id="@+id/btnContactsFetch"
-                    style="@style/comresCommonBtnDefaultStyle"
+            <TextView
+                    android:id="@+id/tvFingerprintAuthInfo"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginBottom="20dp"
-                    android:text="Contacts Fetch"
-                    />
-
-            <Button
-                    android:id="@+id/btnScreenshotDetect"
-                    style="@style/comresCommonBtnDefaultStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:text="Screenshot Detect"
-                    />
-
-            <Button
-                    android:id="@+id/btnFingerprintAuth"
-                    style="@style/comresCommonBtnDefaultStyle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:text="Fingerprint Auth"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/comresColorDarkgray"
+                    android:textSize="@dimen/comresTextSize16Sp"
                     />
         </LinearLayout>
     </ScrollView>

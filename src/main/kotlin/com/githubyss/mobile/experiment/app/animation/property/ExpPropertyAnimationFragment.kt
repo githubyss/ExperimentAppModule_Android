@@ -2,14 +2,14 @@ package com.githubyss.mobile.experiment.app.animation.property
 
 import android.animation.ObjectAnimator
 import android.animation.ValueAnimator
+import android.graphics.Point
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.githubyss.mobile.common.kit.ComkitApplication
-import com.githubyss.mobile.common.ui.animator.evaluator.coordinate.ComuiCoordinate
-import com.githubyss.mobile.common.ui.animator.evaluator.coordinate.ComuiCoordinateEvaluator
+import com.githubyss.mobile.common.ui.animator.evaluator.coordinate.ComuiPointEvaluator
 import com.githubyss.mobile.common.ui.floatingwindow.ComuiAutoHideFloatingWindow
 import com.githubyss.mobile.experiment.app.R
 import com.githubyss.mobile.experiment.app.base.ExpBaseFragment
@@ -17,14 +17,13 @@ import com.githubyss.mobile.experiment.app.function.ExpLogcatFunctions
 import kotlinx.android.synthetic.main.exp_fragment_property_animation.*
 
 /**
- * ExpPropertyAnimationFragment.ktnt.kt.kt
+ * ExpPropertyAnimationFragment
  * <Description>
  * <Details>
  *
  * @author Ace Yan
  * @github githubyss
  */
-@Route(path = "/experiment/app/animation/ExpPropertyAnimationFragment")
 class ExpPropertyAnimationFragment : ExpBaseFragment() {
     companion object {
         val TAG = ExpPropertyAnimationFragment::class.java.simpleName
@@ -56,19 +55,26 @@ class ExpPropertyAnimationFragment : ExpBaseFragment() {
         }
     }
 
+    private fun Point.scale(scale: Int): Point {
+        this.x *= scale
+        this.y *= scale
+        return Point(x, y)
+    }
+
     private fun startMoveValueAnimator(view: View) {
-        val originX = view.x
-        val originY = view.y
-        val originCoordinate = ComuiCoordinate(originX, originY)
-        val targetedCoordinate = ComuiCoordinate(originX, originY + 500)
-        moveValueAnimator = ValueAnimator.ofObject(ComuiCoordinateEvaluator(), originCoordinate, targetedCoordinate)
+        val originX = view.x.toInt()
+        val originY = view.y.toInt()
+        val originPoint = Point(originX, originY)
+//        val targetedPoint = Point(originX, originY + 500)
+        val targetedPoint = originPoint.scale(2)
+        moveValueAnimator = ValueAnimator.ofObject(ComuiPointEvaluator(), originPoint, targetedPoint)
         moveValueAnimator?.duration = 1000
         moveValueAnimator?.startDelay = 0
         moveValueAnimator?.repeatCount = 1
         moveValueAnimator?.repeatMode = ValueAnimator.REVERSE
         moveValueAnimator?.addUpdateListener { animation ->
-            val currentValue = animation.animatedValue as ComuiCoordinate
-            view.y = currentValue.y
+            val currentValue = animation.animatedValue as Point
+            view.y = currentValue.y.toFloat()
             view.requestLayout()
 
             ExpLogcatFunctions.logcatViewProperty(view)
