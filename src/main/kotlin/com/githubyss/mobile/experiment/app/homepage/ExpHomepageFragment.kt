@@ -10,6 +10,7 @@ import com.githubyss.mobile.experiment.app.base.ExpBaseFragment
 import com.githubyss.mobile.experiment.app.kittest.ExpContactsFetchFragment
 import com.githubyss.mobile.experiment.app.kittest.ExpFingerprintAuthFragment
 import com.githubyss.mobile.experiment.app.kittest.ExpScreenshotDetectFragment
+import com.githubyss.mobile.experiment.app.uitest.ExpRecyclerViewFragment
 import kotlinx.android.synthetic.main.exp_fragment_homepage.*
 
 /**
@@ -39,6 +40,8 @@ class ExpHomepageFragment : ExpBaseFragment() {
             R.id.btnScreenshotDetect -> replaceFragment(ExpScreenshotDetectFragment(), ExpScreenshotDetectFragment.TAG, true)
 
             R.id.btnFingerprintAuth -> replaceFragment(ExpFingerprintAuthFragment(), ExpFingerprintAuthFragment.TAG, true)
+
+            R.id.btnRecyclerView -> replaceFragment(ExpRecyclerViewFragment(), ExpRecyclerViewFragment.TAG, true)
         }
     }
 
@@ -49,6 +52,7 @@ class ExpHomepageFragment : ExpBaseFragment() {
         btnContactsFetch.setOnClickListener(onClickListener)
         btnScreenshotDetect.setOnClickListener(onClickListener)
         btnFingerprintAuth.setOnClickListener(onClickListener)
+        btnRecyclerView.setOnClickListener(onClickListener)
     }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
